@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import eu.hansolo.medusa.Clock?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="819.0" prefWidth="1538.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <AnchorPane prefHeight="819.0" prefWidth="363.0" style="-fx-background-color: #00cec9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="27.0" layoutY="96.0" onMouseClicked="#returnToHome" prefHeight="73.0" prefWidth="309.0" ripplerFill="#0899d7" style="-fx-background-color: #f5f6fa;" styleClass="Button" stylesheets="@assest/styles/style.css" text="   Home">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assest/images/home-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="27.0" layoutY="231.0" onMouseClicked="#moveToCategory" prefHeight="73.0" prefWidth="309.0" ripplerFill="#0899d7" style="-fx-background-color: #f5f6fa;" styleClass="Button" stylesheets="@assest/styles/style.css" text="   Categories">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assest/images/cat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="27.0" layoutY="366.0" onMouseClicked="#moveToProductManagement" prefHeight="73.0" prefWidth="309.0" ripplerFill="#0899d7" style="-fx-background-color: #f5f6fa;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Product Management">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assest/images/items.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="27.0" layoutY="501.0" onMouseClicked="#moveToStocks" prefHeight="54.0" prefWidth="309.0" ripplerFill="#0899d7" style="-fx-background-color: #f5f6fa;" styleClass="Button" stylesheets="@assest/styles/style.css" text="   Stock">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assest/images/stock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="27.0" layoutY="636.0" onMouseClicked="#logout_function" prefHeight="54.0" prefWidth="309.0" ripplerFill="#0899d7" style="-fx-background-color: #f5f6fa;" styleClass="Button" stylesheets="@assest/styles/style.css" text="   Logout">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assest/images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loadingContext" layoutX="363.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="821.0" prefWidth="1176.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="363.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <Clock dateVisible="true" dayVisible="true" discreteMinutes="false" discreteSeconds="false" layoutX="799.0" layoutY="-5.0" prefHeight="179.0" prefWidth="393.0" skinType="DIGI">
+               <customFont>
+                  <Font name="Roboto Bold" size="5.0" />
+               </customFont>
+            </Clock>
+            <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="955.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/facebook.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="1008.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/whats.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="275.0" fitWidth="490.0" layoutX="353.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/buinesslogo2.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="23.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User :" wrappingWidth="58.13671875">
+               <font>
+                  <Font name="Bookman Old Style" size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblUser" layoutX="84.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.13671875">
+               <font>
+                  <Font name="Bookman Old Style" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

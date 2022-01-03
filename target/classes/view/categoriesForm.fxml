@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1176.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CategoriesFormController">
+   <children>
+      <Text layoutX="117.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category Code :" wrappingWidth="166.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="611.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category Name :" wrappingWidth="166.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtCategoryCode" layoutX="283.0" layoutY="106.0" prefHeight="50.0" prefWidth="255.0" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCategoryName" layoutX="785.0" layoutY="106.0" prefHeight="50.0" prefWidth="345.0" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="264.0" layoutY="209.0" onMouseClicked="#clearButtonOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #e55039;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/clear_logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" layoutX="450.0" layoutY="210.0" onMouseClicked="#addButtonOnAction" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #2980b9;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/plus_logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" disable="true" layoutX="816.0" layoutY="210.0" onMouseClicked="#updateButtonOnAction" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #3cbfb7;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/update_icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" layoutX="631.0" layoutY="210.0" onMouseClicked="#deleteButtonOnAction" prefHeight="38.0" prefWidth="143.0" style="-fx-background-color: #f63436;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/delete_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblViewCategory" layoutX="53.0" layoutY="303.0" prefHeight="472.0" prefWidth="1076.0" style="-fx-background-color: #8395a7;" styleClass="table-row-cell" stylesheets="@assest/styles/style.css">
+         <columns>
+            <TableColumn prefWidth="379.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Category Code" />
+            <TableColumn prefWidth="696.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Category Name" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Text layoutX="49.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" wrappingWidth="123.04296875">
+         <font>
+            <Font name="Bodoni MT Bold" size="29.0" />
+         </font>
+      </Text>
+      <Separator layoutX="176.0" layoutY="43.0" prefHeight="3.0" prefWidth="954.0" />
+   </children>
+</AnchorPane>

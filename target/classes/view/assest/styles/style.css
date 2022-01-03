@@ -1,0 +1,14 @@
+.Button{
+    -fx-background-radius:8;
+    -fx-border-radius: 8;
+}
+
+.text-field{
+    -fx-border-width: 2;
+    -fx-border-radius:8;
+    -fx-background-radius:8;
+}
+.table-row-cell{
+    -fx-font-size:25;
+    -fx-font-weight: bold;
+}

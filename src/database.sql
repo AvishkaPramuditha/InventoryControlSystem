@@ -1,0 +1,33 @@
+CREATE  DATABASE IF NOT EXISTS  `Inventory Control System`;
+USE `Inventory Control System`;
+CREATE TABLE Category(
+    CategoryCode VARCHAR(10) NOT NULL ,
+    CategoryName VARCHAR(30) UNIQUE ,
+    CONSTRAINT PRIMARY KEY(CategoryCode)
+);
+
+CREATE TABLE Product(
+    ProductID VARCHAR(20) NOT NULL,
+    ProductName VARCHAR(40) NOT NULL,
+    UnitPrice DOUBLE NOT NULL,
+    Manufacturer VARCHAR(30) NOT NULL,
+    CategoryCode VARCHAR (10) NOT NULL,
+    CONSTRAINT PRIMARY KEY (ProductID),
+    CONSTRAINT FOREIGN KEY (CategoryCode) REFERENCES Category(CategoryCode) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Stock(
+    ProductID VARCHAR(20) NOT NULL,
+    QuantityOnHand INT NOT NULL,
+    CONSTRAINT PRIMARY KEY (ProductID),
+    CONSTRAINT FOREIGN KEY (ProductID) REFERENCES Product(ProductID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE  TABLE Login(
+    UserName VARCHAR(50) NOT NULL,
+    Password int NOT NULL,
+    CONSTRAINT PRIMARY KEY (UserName)
+);
+
+INSERT INTO Login VALUES("priyalalStore",-599681485);
+

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="828.0" prefWidth="1176.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductManagementFormController">
+   <children>
+      <TextField fx:id="txtProductID" layoutX="200.0" layoutY="89.0" prefHeight="50.0" prefWidth="254.0" promptText="search/add here" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Text layoutX="44.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID :" wrappingWidth="127.99999737739563">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnSearch" alignment="CENTER" buttonType="RAISED" layoutX="478.0" layoutY="123.0" onMouseClicked="#searchProductByIDNameFunction" prefHeight="50.0" prefWidth="128.0" style="-fx-background-color: #192a56;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/search_icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text layoutX="44.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name :" wrappingWidth="166.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtProductName" layoutX="201.0" layoutY="156.0" prefHeight="50.0" prefWidth="254.0" promptText="search/add here" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Text layoutX="717.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select category : " wrappingWidth="174.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmbCategory" layoutX="888.0" layoutY="90.0" prefHeight="40.0" prefWidth="240.0" style="-fx-border-color: #16a085; -fx-border-width: 2;" />
+      <Text layoutX="55.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="723.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price :" wrappingWidth="141.04296875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUnitPrice" layoutX="890.0" layoutY="147.0" prefHeight="50.0" prefWidth="240.0" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Text layoutX="724.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer :" wrappingWidth="166.0429708957672">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtManufacturer" layoutX="893.0" layoutY="213.0" prefHeight="50.0" prefWidth="240.0" style="-fx-border-color: #16a085;" styleClass="text-field" stylesheets="@assest/styles/style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblViewProduct" layoutX="45.0" layoutY="384.0" prefHeight="393.0" prefWidth="1085.0" style="-fx-background-color: #8395a7;" styleClass="table-row-cell" stylesheets="@assest/styles/style.css">
+         <columns>
+            <TableColumn prefWidth="131.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Product ID " />
+            <TableColumn prefWidth="348.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Product Name " />
+            <TableColumn prefWidth="209.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Category " />
+            <TableColumn prefWidth="211.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Unit Price" />
+            <TableColumn prefWidth="186.0" style="-fx-font-size: 17; -fx-background-color: #bdc3c7;" text="Manufacturer" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnDelete" alignment="CENTER" buttonType="RAISED" disable="true" layoutX="990.0" layoutY="303.0" onMouseClicked="#deleteProductFunction" prefHeight="49.0" prefWidth="141.0" style="-fx-background-color: #f63436;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/delete_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="459.0" layoutY="304.0" onMouseClicked="#clearTextFieldsFunction" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #e55039;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/clear_logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" layoutX="641.0" layoutY="304.0" onMouseClicked="#addProductFunction" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #2980b9;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/plus_logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" alignment="CENTER" buttonType="RAISED" disable="true" layoutX="812.0" layoutY="304.0" onMouseClicked="#updateProductFunction" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #3cbfb7;" styleClass="Button" stylesheets="@assest/styles/style.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/images/update_icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text layoutX="42.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Management" wrappingWidth="311.04296875">
+         <font>
+            <Font name="Bodoni MT Bold" size="29.0" />
+         </font>
+      </Text>
+      <Separator layoutX="306.0" layoutY="29.0" prefHeight="11.0" prefWidth="820.0" />
+   </children>
+</AnchorPane>
